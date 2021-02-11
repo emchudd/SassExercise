@@ -3,8 +3,13 @@
 
 .main{
     background-color: tan;
+    h4{
+        display:none;
+    }
+    @include flex (space-between, center)
 
     h1{
+        
         color: #dddddd;
         &:hover{
             
@@ -12,17 +17,22 @@
             @extend %center;
         }
     }
-    h2, h3{
+    h2{
+        background-color: $brown1;
+    }
+    h3{
         color: $brown1;
     }
 }
 .minor{
     background-color: silver;
     h1{
-        text-decoration: line-through;
-        margin-bottom: 
+        text-decoration: underline;
+        @extend %center;
+        margin-bottom: 25px * 4;
     }
-    h1, h2{
+    h2{
+        text-decoration: line-through;
         @extend %center;
     }
 }
